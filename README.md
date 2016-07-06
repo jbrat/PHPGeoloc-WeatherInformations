@@ -13,6 +13,13 @@ composer install
 
 ```
 
-require __DIR__.'/vendor/autoload.php'; On your script PHP
+Require the autoload on your PHP Script : 
+```
+require __DIR__.'/vendor/autoload.php'; 
 
-And after call the API Weather or Geolocalisation
+```
+
+And after call the API Weather or Geolocalisation 
+
+
+You need to set the API key for the weather : openweathermap.org
