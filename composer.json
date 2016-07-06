@@ -1,0 +1,14 @@
+{
+    "authors": [
+        {
+            "name": "Julien BRAT",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "geoMarketing\\": "src/" }
+    },
+    "require": {
+        "php-curl-class/php-curl-class": "^4.11"
+    }
+}
