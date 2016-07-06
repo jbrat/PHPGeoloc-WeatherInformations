@@ -138,7 +138,9 @@ class APIGeolocalisation
             'country'   => $curlResult->address->country,
             'city'      => $curlResult->address->city,
             'postcode'  => explode(';', $curlResult->address->postcode)[0],
-            'region'    => $curlResult->address->state
+            'region'    => $curlResult->address->state,
+            'lat'       => $this->latitude,
+            'lng'       => $this->longitude
         );
     }
     
@@ -160,12 +162,20 @@ class APIGeolocalisation
         
         $countryName = $this->getCountryNameWithISO($curlResult->country);
         
+        $latitude = explode(",", $curlResult->loc)[0];
+        $longitude = explode(",", $curlResult->loc)[1];
+        
+        $this->setLatitude($latitude);
+        $this->setLongitude($longitude);
+        $resultPostCode = $this->getGeolocWithLatLng()['postcode'];
+        
         return array(
             "city"      => $curlResult->city,
             "country"   => $countryName,
             "region"    => $curlResult->region,
-            "lat"       => explode(",", $curlResult->loc)[0],
-            "lng"       => explode(",", $curlResult->loc)[1]
+            "lat"       => $latitude,
+            "lng"       => $longitude,
+            "postcode"  => $resultPostCode
         );
     }
     
