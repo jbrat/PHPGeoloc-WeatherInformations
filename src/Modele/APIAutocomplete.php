@@ -39,7 +39,7 @@ class APIAutocomplete
         }
         
         foreach($result as $country) {
-            $countrys[trim($country->name)] = trim($country->name);
+            $countrys[] = trim($country->name);
         }
         
         return json_encode($countrys);
