@@ -2,6 +2,6 @@
 
 namespace geoMarketing\Exception;
 
-class InvalidIPArgumentException extends \Exception{
-    
+class InvalidIPArgumentException extends \Exception
+{
 }

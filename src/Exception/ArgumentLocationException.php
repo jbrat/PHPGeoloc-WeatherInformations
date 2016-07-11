@@ -2,6 +2,6 @@
 
 namespace geoMarketing\Exception;
 
-class ArgumentLocationException extends \Exception {
-    
+class ArgumentLocationException extends \Exception
+{
 }

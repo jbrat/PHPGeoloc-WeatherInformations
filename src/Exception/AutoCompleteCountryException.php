@@ -8,6 +8,6 @@
 
 namespace geoMarketing\Exception;
 
-class AutoCompleteCountryException extends \Exception {
-
+class AutoCompleteCountryException extends \Exception
+{
 }

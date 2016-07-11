@@ -2,6 +2,6 @@
 
 namespace geoMarketing\Exception;
 
-
-class APIWeatherException extends \Exception {
+class APIWeatherException extends \Exception
+{
 }
