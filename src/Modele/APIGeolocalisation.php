@@ -190,9 +190,10 @@ class APIGeolocalisation
      */
     public function getCountryNameWithISO($isoCountry)
     {
+
         $curl = new Curl;
-        $curlResult = $curl->get($this->countryAPI.$isoCountry);
-        
+        $curlResult = $curl->get($this->countryAPI . "=" . $isoCountry);
+      
         if($curl->httpStatusCode != 200) {
             throw new APICountryISOException("The connection with the country API failed");
         }
